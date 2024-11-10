@@ -1,4 +1,7 @@
-# jabas
+# Jabas Tools
+```
+A desktop application that uses the Electron and Vue.js frameworks for front-end componentization, and on the back-end uses the Rust programming language for SQLite database access, as well as image manipulation.
+```
 
 ## Project setup
 ```

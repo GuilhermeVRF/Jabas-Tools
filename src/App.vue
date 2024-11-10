@@ -1,26 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <SideBar msg="Welcome to Your Vue.js App"/>
+  <div class="content">
+    <AppHeader></AppHeader>
+    <div class="main-services">
+      <AppServices 
+        title="PDF" 
+        :services="[
+          {title: 'Gerar PDF',href: '/generate-pdf'},
+          {title: 'HTML para PDF',href: '/html-to-pdf'},
+        ]"
+      />
+      <AppServices title="Imagens"
+        :services="[
+          {title: 'PNG para JPEG', hre: '/png-to-jpeg'}
+        ]"
+      />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SideBar from './components/sidebar/Sidebar.vue'
+import AppHeader from './components/appHeader/AppHeader.vue'
+import AppServices from './components/appServices/AppServices.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SideBar,
+    AppHeader,
+    AppServices
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  font-family: 'Times New Roman';
+  padding: 0;
+  margin: 0;
+}
+#app{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-services{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh
 }
 </style>
