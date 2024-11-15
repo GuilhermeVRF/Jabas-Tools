@@ -29,8 +29,9 @@ export default {
     .services{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
         align-items: center;
+        gap: 50px;
+        justify-content: center;
         width: 100%;
     }
 

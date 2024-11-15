@@ -1,18 +1,26 @@
 <template>
-    <a class="service">
-        <RouterLink :to="href">
-            <div class="service-image"></div>
-            <p>{{ title }}</p>
-        </RouterLink>
-    </a> 
+    <RouterLink :to="href" class="service">
+        <img class="service-image" :src="require(`../../assets/images/${imgSrc}`)">
+        <p>{{ title }}</p>
+    </RouterLink>
 </template>
   
 <script>
 export default {
     name: 'AppService',
     props: {
-        title: String,
-        href: String
+        title: {
+            type: String,
+            required: true, 
+        },
+        imgSrc: {
+            type: String,
+            default: 'notFound.png', 
+        },
+        href: {
+            type: String,
+            required: true, 
+        },
     }
 }
 </script>
@@ -25,6 +33,8 @@ export default {
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        text-decoration: none;
+        color: black;
     }
 
     .service-image{
