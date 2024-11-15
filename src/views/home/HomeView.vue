@@ -1,13 +1,13 @@
 <template>
-<SideBar msg="Welcome to Your Vue.js App"/>
+<SideBar/>
   <div class="content">
-    <AppHeader></AppHeader>
+    <AppHeader />
     <div class="main-services">
       <AppServices 
         title="PDF" 
         :services="[
-          {title: 'Gerar PDF',href: '/generate-pdf'},
-          {title: 'HTML para PDF',href: '/html-to-pdf'},
+          {title: 'Gerar PDF', href: '/PDF/generate'},
+          {title: 'HTML para PDF', href: '/html-to-pdf'},
         ]"
       />
       <AppServices title="Imagens"
@@ -35,23 +35,12 @@ export default {
 </script>
 
 <style>
-*{
-  font-family: 'Times New Roman';
-  padding: 0;
-  margin: 0;
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
 
 .main-services{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  height: 100vh
+  height: 100vh;
+  margin: 50px;
 }
 </style>
