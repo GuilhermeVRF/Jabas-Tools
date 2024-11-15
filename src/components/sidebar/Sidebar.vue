@@ -1,9 +1,12 @@
 <template>
   <div class="main-sidebar">
     <ul>
-      <li class="siderbar-home">Página Inicial</li>
-      <li class="sidebar-services">Gerar PDF</li>
-      <li class="sidebar-services">Imagens</li>
+      <li class="siderbar-home">
+        <RouterLink to="/PDF/generate">Página Inicial</RouterLink>
+      </li>
+      <li class="sidebar-services">
+        <RouterLink to="/PDF/generate">Gerar PDF</RouterLink>
+      </li>
     </ul>
   </div>
 </template>
@@ -41,11 +44,16 @@ li{
   padding: 5px;
   font-size: 18px;
 }
+a{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
 
-li:hover{
+a:hover{
   background-color: white;
   color: black;
   border-radius: 5px;
-  transition: 0.5s;
+  transition: 0.75s;
 }
 </style>

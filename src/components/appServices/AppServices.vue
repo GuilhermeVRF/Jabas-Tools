@@ -38,5 +38,11 @@ export default {
         text-align: center;
         width: 100%;
     }
+
+    @media (max-width: 600px){
+        .services{
+            flex-direction: column;
+        }
+    }
   </style>
   

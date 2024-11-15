@@ -1,7 +1,9 @@
 <template>
     <a class="service">
-        <div class="service-image"></div>
-        <p>{{ title }}</p>
+        <RouterLink :to="href">
+            <div class="service-image"></div>
+            <p>{{ title }}</p>
+        </RouterLink>
     </a> 
 </template>
   
